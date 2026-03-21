@@ -24,11 +24,15 @@ const HeroSection = () => {
           </div>
 
           {/* Headline */}
+          
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight mb-6 animate-fade-up stagger-1">
-            Scrap Polyester
-            <span className="text-accent block">Choose Cotton</span>
-            Stay Natural
+            Pangeos <span className="font-"> Lifestyle  </span> 
+            <span className="text-accent block">Beyond the ordinary</span>
+            <span className="text-accent block text-4xl">Choose Cotton |  Stay Natural</span>
+           
           </h1>
+          
+
 
           {/* Subtext */}
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 animate-fade-up stagger-2 max-w-xl">
