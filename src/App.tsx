@@ -5,6 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import ProductDetail from "./pages/ProductDetail";
+import CategoryProducts from "./pages/CategoryProducts";
 
 // About Pages
 import AboutIntent from "./pages/about/AboutIntent";
@@ -37,12 +39,10 @@ const App = () => (
           <Route path="/brands" element={<Brands />} />
           <Route path="/brands/:brandSlug" element={<BrandDetail />} />
           
-          {/* Category Routes - redirect to brands */}
-          <Route path="/categories/mens" element={<BrandDetail />} />
-          <Route path="/categories/womens" element={<BrandDetail />} />
-          <Route path="/categories/kids" element={<BrandDetail />} />
-          <Route path="/categories/winter" element={<BrandDetail />} />
-          
+
+          {/* ✅ CATEGORY ROUTE (MAIN FIX) */}
+          <Route path="/categories/:category" element={<CategoryProducts />} />
+
           {/* Customized Wear */}
           <Route path="/customized-wear" element={<CustomizedWear />} />
           <Route path="/customized-wear/:category" element={<CustomizedWear />} />
@@ -61,7 +61,7 @@ const App = () => (
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
           
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          {/* Catch-all */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
